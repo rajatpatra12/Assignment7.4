@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Java Script</title>
+</head>
+<body>
+	<h1> The closure concept </h1>
+	
+	  <script>
+         var addTo=function(outer)
+         {
+         	 var add=function(inner)
+         	 {
+         	 	return outer+inner;
+         	 }
+         	  return add;
+         };
+
+         var addthree=new addTo(9);
+          console.dir(addthree);
+          console.log(addthree(7));
+
+
+	  </script>
+</body>
+</html>
